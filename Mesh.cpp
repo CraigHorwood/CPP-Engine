@@ -93,7 +93,7 @@ void Mesh::bind()
 {
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
-    GLsizei stride = sizeof(float) << 3;
+    const GLsizei stride = sizeof(float) << 3;
     glVertexAttribPointer(ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, stride, 0);
     glVertexAttribPointer(ATTR_TEX_COORD, 2, GL_FLOAT, GL_FALSE, stride, (void*) (sizeof(float) * 3));
     glVertexAttribPointer(ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, stride, (void*) (sizeof(float) * 5));

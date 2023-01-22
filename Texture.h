@@ -8,8 +8,8 @@
 class Texture
 {
 public:
-    Texture(std::string);
-    Texture(std::string, bool);
+    void init(std::string);
+    void init(std::string, bool);
     ~Texture();
     void bind();
 private:

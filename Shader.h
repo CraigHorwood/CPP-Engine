@@ -13,8 +13,8 @@
 class Shader
 {
 public:
-    Shader(std::string, std::string);
     ~Shader();
+    void init(std::string, std::string);
     void use();
     void setUniformLocation(std::string);
     void setUniform1i(std::string, int);

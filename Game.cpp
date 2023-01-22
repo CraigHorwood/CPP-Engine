@@ -12,18 +12,6 @@ using namespace std;
 
 Game::Game()
 {
-    lightingShader = new Shader("assets/shaders/lighting.vsh", "assets/shaders/lighting.fsh");
-    lightingShader->setUniformLocation("projectionMatrix");
-    lightingShader->setUniformLocation("viewMatrix");
-    skyShader = new Shader("assets/shaders/sky.vsh", "assets/shaders/sky.fsh");
-    skyShader->setUniformLocation("projectionMatrix");
-    skyShader->setUniformLocation("viewMatrix");
-    skyTexture = new Texture("assets/textures/sky.tex", true);
-    floorTexture = new Texture("assets/textures/floor.tex");
-    grassTexture = new Texture("assets/textures/grass.tex");
-    skyMesh = new Mesh("assets/models/sky.mdl");
-    floorMesh = new Mesh("assets/models/floor.mdl");
-    roomMesh = new Mesh("assets/models/room.mdl");
     loadPerspectiveProjectionMatrix(projectionMatrix, 70.0f, 16.0f / 9.0f, 0.0625f, 16.0f);
     loadIdentityMatrix(viewMatrix);
     player = new Player(this, 2.0f, 2.0f, -2.0f);
@@ -37,14 +25,6 @@ Game::Game()
 
 Game::~Game()
 {
-    delete skyShader;
-    delete lightingShader;
-    delete skyTexture;
-    delete floorTexture;
-    delete grassTexture;
-    delete skyMesh;
-    delete floorMesh;
-    delete roomMesh;
     delete player;
 }
 

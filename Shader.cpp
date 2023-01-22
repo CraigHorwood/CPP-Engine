@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Shader::Shader(string vertexShaderPath, string fragmentShaderPath)
+void Shader::init(string vertexShaderPath, string fragmentShaderPath)
 {
     ifstream vertexShaderStream(vertexShaderPath);
     if (!vertexShaderStream.is_open())

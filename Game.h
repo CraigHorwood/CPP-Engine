@@ -22,14 +22,6 @@ public:
     int xLast, yLast;
 private:
     void takeKey(int, bool);
-    Shader* lightingShader;
-    Shader* skyShader;
-    Texture* skyTexture;
-    Texture* floorTexture;
-    Texture* grassTexture;
-    Mesh* skyMesh;
-    Mesh* floorMesh;
-    Mesh* roomMesh;
     float projectionMatrix[16];
     float viewMatrix[16];
     Player* player;
